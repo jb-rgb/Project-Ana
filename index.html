@@ -3,24 +3,472 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Titulo</title>
+        <title>Universidad del Mar - Huatulco</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="./css/styles.css">
     </head>
-    <body>
-        <header class="bg-white shadow p-4">
-            <h1 class="text2xl font-bold text-center text-primario">Mi sitio con Taildwind</h1> 
-        </header>
-        <main class="p-6 max-w-3xl mx-auto">
-            <section class="mb-6">
-                <h2 class="text-xl font-semibold mb-2">Bienvenido</h2>
-                <p>Este es un ejemplo básico de estructura usando Tailwind por CDN.</p>
-            </section>
-            <img src="./assets/img/picture.jpg" alt="Ejemplo" class="rounded shadow">
-        </main>
-        <footer class="bg-white text-center text-sm p-4 mt-6 border-t">
-            © 2023 Mi Sitio. Todos los derechos reservados.
+    <body id="inicio" class="bg-gray-100 text-gray-800 font-sans">
+        <!-- Navbar con 7 apartados -->
+        <nav class="bg-gray-800 p-4 fixed top-0 left-0 w-full z-10 shadow-md">
+            <ul class="flex space-x-4">
+                <!-- Logo de la escuela -->
+                <li class="text-white font-bold">
+                    <img src="./img/logo.png" alt="Logo de la escuela" class="h-8 inline-block">
+                </li>
+                <!-- Titulo de la escuela centrado en el navbar -->
+                <li class="text-white text-lg font-semibold flex-grow text-center">
+                    Ciencias de la Comunicación
+                </li>
+                <!-- Enlaces de navegación -->
+                <li><a href="#home" class="text-white hover:text-gray-300">Inicio</a></li>
+                <li><a href="#about" class="text-white hover:text-gray-300">Sobre Nosotros</a></li>
+                <li><a href="#courses" class="text-white hover:text-gray-300">Cursos</a></li>
+                <li><a href="#blog" class="text-white hover:text-gray-300">Blog</a></li>
+                <li><a href="#contact" class="text-white hover:text-gray-300">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección Hero + CTA (Imagen de gran tamaño y atractiva, Texto inspirador y llamativo y CTA grande, con colores llamativos, debe llevar el texto ¡Inscríbete ahora! o similar) -->
+        <section class="hero bg-cover bg-center h-screen" style="background-image: url('./img/hero.jpg');">
+            <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+                <div class="text-center text-white p-8">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">¡Transforma tu futuro con nosotros!</h1>
+                    <p class="text-lg mb-6">Aprende a programar desde cero con nuestros cursos diseñados para todos los niveles.</p>
+                    <a href="#courses" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">¡Inscríbete ahora!</a>
+                    
+                    <!-- Social icons (Al pie de Hero Section, hay un contenedor con iconos para redes sociales (usar boxicons))-->
+                    <div class="flex justify-center space-x-6 mt-6">
+                        <a href="#" class="text-white hover:text-gray-300">
+                            <i class="bi bi-facebook text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-300">
+                            <i class="bi bi-twitter-x text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-300">
+                            <i class="bi bi-instagram text-3xl"></i>
+                        </a>
+                    </div>
+
+                    <!-- Newsletter (En seguida de social icons tenemos un contenedor para que las personas nos dejen su mail para suscribirse a nuestro boletín de noticias) -->
+                    <section class="bg-black-100 p-8 mt-8">
+                        <div class="max-w-md mx-auto text-center">
+                            <h2 class="text-2xl font-bold mb-4">Suscríbete a nuestro boletín</h2>
+                            <p class="mb-6">Recibe las últimas noticias y actualizaciones sobre nuestros cursos directamente en tu correo electrónico.</p>
+                            <form action="#" method="POST" class="flex flex-col space-y-4">
+                                <input type="email" placeholder="Tu correo electrónico" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Suscribirse</button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Numeralia (Stats section) (En esta sección destacaremos algunos datos relevantes sobre nuestra carrera. Por ejemplo, la cantidad total de personas egresadas, los años de experiencia que tiene la carrera, el porcentaje de titulación, la cantidad de egresados que encuentran empleo en el campo etc.. )-->
+        <section class="mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="./img/egresados.png" alt="Egresados" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">500+</h3>
+                    <p class="text-gray-600">Egresados</p>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="./img/experiencia.png" alt="Experiencia" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">10 Años</h3>
+                    <p class="text-gray-600">De experiencia</p>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="./img/titulacion.png" alt="Tasa de titulación" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">95%</h3>
+                    <p class="text-gray-600">Tasa de titulación</p>
+                </div>
+        
+            </div>
+        </section>
+        
+        <!-- Testimonios (Sección con una gran imagen ilustrativa y un texto con testimonio de caso de éxito, puede ser un ex alumne, o cualquier otro caso de éxito que se quiera resaltar. Al pie incluye un botón de leer más...)-->
+        <section class="bg-gray-100 py-12 mt-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Historias que inspiran</h2>
+        
+                <div class="grid gap-8 md:grid-cols-3">
+        
+                    <!-- Testimonio 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <img src="./img/testimonio1.jpg" alt="Alex Ramírez" class="rounded-full w-24 h-24 object-cover mb-4">
+                        <p class="italic text-gray-700 mb-4">
+                            “Gracias a la formación que recibí, hoy trabajo en una empresa internacional como desarrollador.”
+                        </p>
+                        <p class="font-semibold text-blue-700 mb-4">— Alex Ramírez, egresado 2022</p>
+                        <a href="#leer-mas"
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                            Leer más...
+                        </a>
+                    </div>
+        
+                    <!-- Testimonio 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <img src="./img/testimonio2.jpg" alt="Sofía Torres" class="rounded-full w-24 h-24 object-cover mb-4">
+                        <p class="italic text-gray-700 mb-4">
+                            “Lo que aprendí aquí me dio la seguridad para lanzar mi propia app. ¡Ahora tengo miles de usuarios
+                            activos!”
+                        </p>
+                        <p class="font-semibold text-blue-700 mb-4">— Sofía Torres, egresada 2021</p>
+                        <a href="#leer-mas"
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                            Leer más...
+                        </a>
+                    </div>
+        
+                    <!-- Testimonio 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <img src="./img/testimonio3.jpg" alt="Luis Hernández" class="rounded-full w-24 h-24 object-cover mb-4">
+                        <p class="italic text-gray-700 mb-4">
+                            “Conseguí trabajo como junior developer apenas unas semanas después de terminar el curso.
+                            ¡Totalmente recomendado!”
+                        </p>
+                        <p class="font-semibold text-blue-700 mb-4">— Luis Hernández, egresado 2023</p>
+                        <a href="#leer-mas"
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                            Leer más...
+                        </a>
+                    </div>
+        
+                </div>
+                <!-- Logos de empresas e instituciones -->
+                <div class="mt-16 text-center">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Nuestros egresados trabajan en:</h3>
+                
+                    <div class="flex flex-wrap justify-center items-center gap-6">
+                        <!-- Logo 1 -->
+                        <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-microsoft text-6xl"></i>
+                        </a>
+                
+                        <!-- Logo 2 (Spotify) -->
+                        <a href="https://www.spotify.com" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-spotify text-6xl"></i>
+                        </a>
+                
+                        <!-- Logo 4 -->
+                        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-google text-6xl"></i>
+                        </a> 
+                
+                        <!-- Logo 5 (Youtube) -->
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-youtube text-6xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Plan de estudios -->
+        <section class="bg-white py-16 mt-12">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Columna izquierda: PDF embebido -->
+                <div class="w-full h-[600px] border rounded-lg overflow-hidden shadow-lg">
+                    <iframe src="./assets/pdf/plan-de-estudios-comunicacion.pdf" width="100%" height="100%" frameborder="0"
+                        style="object-fit: contain;">
+                        Este navegador no admite iframes embebidos de PDF. Puedes descargar el archivo
+                        <a href="./assets/pdf/plan-de-estudios-comunicacion.pdf">aquí</a>.
+                    </iframe>
+                </div>
+        
+                <!-- Columna derecha: Texto -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Plan de Estudios</h2>
+                    <p class="text-gray-700 mb-6">
+                        Conoce en detalle el contenido académico de nuestra carrera: materias, duración y estructura por
+                        semestre. Aquí encontrarás toda la información organizada por semestre para que puedas conocer el
+                        desarrollo académico a lo largo de tu formación.
+                    </p>
+                    <!-- Botón que lleva a la página del plan de estudios -->
+                    <a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_ciencias_de_la_comunicacion"
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        Ver más...
+                    </a>
+                </div>
+        
+            </div>
+        </section>
+
+        <!-- Profesores -->
+        <section class="bg-gray-50 py-16 mt-12">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-10">Nuestro equipo docente</h2>
+        
+                <!-- Contenedor de tarjetas -->
+                <div id="profesoresGrid" class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        
+                    <!-- Profesor 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <img src="./img/profesor1.jpg" alt="Dra. Laura Martínez"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Dra. Laura Martínez</h3>
+                        <p class="text-gray-600 text-sm mt-2">Especialista en inteligencia artificial con más de 15 años de
+                            experiencia académica.</p>
+                    </div>
+        
+                    <!-- Profesor 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <img src="./img/profesor2.jpg" alt="Mtro. Carlos Herrera"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Mtro. Carlos Herrera</h3>
+                        <p class="text-gray-600 text-sm mt-2">Desarrollador full-stack y docente en tecnologías web desde 2012.
+                        </p>
+                    </div>
+        
+                    <!-- Profesor 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <img src="./img/profesor3.jpg" alt="Dra. Ana Suárez"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Dra. Ana Suárez</h3>
+                        <p class="text-gray-600 text-sm mt-2">Investigadora en ciencia de datos con múltiples publicaciones
+                            internacionales.</p>
+                    </div>
+        
+                    <!-- Profesor 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <img src="./img/profesor4.jpg" alt="Ing. Miguel Torres"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Ing. Miguel Torres</h3>
+                        <p class="text-gray-600 text-sm mt-2">Consultor en ciberseguridad y mentor de proyectos estudiantiles.
+                        </p>
+                    </div>
+        
+                    <!-- Más profesores (ocultos por defecto) -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
+                        <img src="./img/profesor5.jpg" alt="Lic. Sofía Pérez"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Lic. Sofía Pérez</h3>
+                        <p class="text-gray-600 text-sm mt-2">Psicopedagoga enfocada en metodologías activas y aprendizaje
+                            personalizado.</p>
+                    </div>
+        
+                    <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
+                        <img src="./img/profesor6.jpg" alt="Mtro. Andrés Gómez"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Mtro. Andrés Gómez</h3>
+                        <p class="text-gray-600 text-sm mt-2">Especialista en sistemas embebidos y automatización industrial.
+                        </p>
+                    </div>
+        
+                </div>
+        
+                <!-- Botón para mostrar más -->
+                <button id="toggleProfesores"
+                    class="mt-8 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+                    + Más
+                </button>
+            </div>
+        </section>
+
+        <!-- Preguntas frecuentes -->
+        <section class="bg-white py-16 mt-12">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-10">Preguntas frecuentes</h2>
+        
+                <!-- Acordeón -->
+                <div class="space-y-4">
+        
+                    <!-- Pregunta 1 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
+                            ¿Necesito conocimientos previos para inscribirme?
+                            <span class="text-xl">+</span>
+                        </button>
+                        <div class="hidden px-4 pb-4 text-gray-600 faq-content">
+                            No, nuestros cursos están diseñados para que puedas comenzar desde cero. Iniciamos con los
+                            fundamentos más básicos.
+                        </div>
+                    </div>
+        
+                    <!-- Pregunta 2 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
+                            ¿Cuál es la duración del plan de estudios?
+                            <span class="text-xl">+</span>
+                        </button>
+                        <div class="hidden px-4 pb-4 text-gray-600 faq-content">
+                            El plan de estudios tiene una duración de 3 años, dividido en 6 semestres.
+                        </div>
+                    </div>
+        
+                    <!-- Pregunta 3 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
+                            ¿Puedo estudiar en línea?
+                            <span class="text-xl">+</span>
+                        </button>
+                        <div class="hidden px-4 pb-4 text-gray-600 faq-content">
+                            Sí. Contamos con modalidad presencial y en línea, ambas con el mismo nivel académico y
+                            acompañamiento docente.
+                        </div>
+                    </div>
+        
+                    <!-- Pregunta 4 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
+                            ¿Qué opciones de financiamiento existen?
+                            <span class="text-xl">+</span>
+                        </button>
+                        <div class="hidden px-4 pb-4 text-gray-600 faq-content">
+                            Ofrecemos planes de pago mensuales y también convenios con instituciones para becas parciales.
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="bg-white py-16 mt-12">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+                <!-- Columna izquierda: Datos de contacto -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Contáctanos</h2>
+                    <p class="text-gray-700 mb-4"><strong>Dirección:</strong> Calle Ejemplo 123, Col. Centro, Ciudad, Estado, CP
+                        00000</p>
+                    <p class="text-gray-700 mb-4"><strong>Teléfono:</strong> <a href="tel:+521234567890"
+                            class="text-blue-600 hover:underline">+52 123 456 7890</a></p>
+                    <p class="text-gray-700 mb-4"><strong>Email:</strong> <a href="mailto:informes@universidad.edu"
+                            class="text-blue-600 hover:underline">informes@universidad.edu</a></p>
+                    <p class="text-gray-600 mt-6">Horario de atención:<br>Lunes a Viernes de 9:00 AM a 6:00 PM</p>
+                </div>
+        
+                <!-- Columna derecha: Mapa de ubicación -->
+                <div class="w-full h-64 md:h-full rounded-lg overflow-hidden shadow-md">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.4479076342564!2d-96.16170882502628!3d15.780319184858037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85bf26af18c62a15%3A0xffa2256118713e56!2sUniversidad%20Del%20Mar%20-%20Huatulco!5e0!3m2!1ses!2smx!4v1749337723609!5m2!1ses!2smx"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="mt-16 bg-gray-100 p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-center mb-6">Envíanos tus datos y te contactamos</h3>
+            
+                <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+                    <!-- Nombre -->
+                    <div class="col-span-1 md:col-span-2">
+                        <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required
+                            class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+            
+                    <!-- Edad -->
+                    <div>
+                        <label for="edad" class="block text-sm font-medium text-gray-700 mb-1">Edad</label>
+                        <input type="number" id="edad" name="edad" min="10" max="99" required
+                            class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+            
+                    <!-- Teléfono -->
+                    <div>
+                        <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono (WhatsApp)</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+52..." required
+                            class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+            
+                    <!-- Correo -->
+                    <div class="col-span-1 md:col-span-2">
+                        <label for="mail" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                        <input type="email" id="mail" name="mail" required
+                            class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+            
+                    <!-- ¿Cómo se enteró? -->
+                    <div class="col-span-1 md:col-span-2">
+                        <label for="origen" class="block text-sm font-medium text-gray-700 mb-1">¿Cómo te enteraste de nuestra
+                            licenciatura?</label>
+                        <select id="origen" name="origen" required
+                            class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="buscador">Google / Buscador</option>
+                            <option value="amigos">Recomendación</option>
+                            <option value="escuela">Tu escuela</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+            
+                    <!-- Botón enviar -->
+                    <div class="col-span-1 md:col-span-2 text-center mt-4">
+                        <button type="submit"
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                            Enviar datos
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-6 mt-16">
+            <div
+                class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4">
+        
+                <!-- Créditos -->
+                <div>
+                    <p class="text-sm">
+                        Propuesta realizada por <strong>Nombre del Estudiante</strong> — 2025
+                    </p>
+                </div>
+        
+                <!-- Botón de volver arriba -->
+                <div>
+                    <a href="#inicio"
+                        class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded transition duration-300">
+                        Volver al inicio
+                    </a>
+                </div>
+            </div>
         </footer>
+
         <script src="./js/script.js"></script>
+        <script>
+            const toggles = document.querySelectorAll('.faq-toggle');
+
+            toggles.forEach((toggle) => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('span');
+
+                    content.classList.toggle('hidden');
+                    icon.textContent = content.classList.contains('hidden') ? '+' : '−';
+                });
+            });
+        </script>
+        <script>
+            const button = document.getElementById('toggleProfesores');
+            const extraCards = document.querySelectorAll('[data-extra]');
+            let expanded = false;
+
+            button.addEventListener('click', () => {
+                expanded = !expanded;
+                extraCards.forEach(card => card.classList.toggle('hidden'));
+                button.textContent = expanded ? 'Ver menos' : '+ Más';
+            });
+        </script>
     </body>
 </html>
