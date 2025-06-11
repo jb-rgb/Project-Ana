@@ -5,36 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Universidad del Mar - Huatulco</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="icon" href="./assets/img/LOGO CC.png" type="image/png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="./css/styles.css">
     </head>
-    <body id="inicio" class="bg-gray-100 text-gray-800 font-sans">
+    <body id="inicio" class="pt-16 bg-gray-100 text-gray-800 font-sans h-full scroll-smooth">
         <!-- Navbar con 7 apartados -->
         <nav class="bg-gray-800 p-4 fixed top-0 left-0 w-full z-10 shadow-md">
-            <ul class="flex space-x-4">
-                <!-- Logo de la escuela -->
-                <li class="text-white font-bold">
-                    <img src="./img/logo.png" alt="Logo de la escuela" class="h-8 inline-block">
+            <ul class="flex items-center space-x-6">
+        
+                <!-- Logo -->
+                <li>
+                    <img src="./assets/img/LOGO.png" alt="Logo de la escuela" class="w-16 h-16 object-contain" />
                 </li>
-                <!-- Titulo de la escuela centrado en el navbar -->
-                <li class="text-white text-lg font-semibold flex-grow text-center">
+        
+                <!-- Título -->
+                <li class="flex-grow text-white text-lg font-semibold text-center">
                     Ciencias de la Comunicación
                 </li>
-                <!-- Enlaces de navegación -->
-                <li><a href="#home" class="text-white hover:text-gray-300">Inicio</a></li>
-                <li><a href="#about" class="text-white hover:text-gray-300">Sobre Nosotros</a></li>
-                <li><a href="#courses" class="text-white hover:text-gray-300">Cursos</a></li>
-                <li><a href="#blog" class="text-white hover:text-gray-300">Blog</a></li>
-                <li><a href="#contact" class="text-white hover:text-gray-300">Contacto</a></li>
+        
+                <!-- Enlaces -->
+                <li><a href="#inicio" class="text-white hover:text-gray-300">¿Qués es?</a></li>
+                <li><a href="#faq" class="text-white hover:text-gray-300">Preguntas</a></li>
+                <li><a href="#plan" class="text-white hover:text-gray-300">Plan de Estudios</a></li>
+                <li><a href="#profesores" class="text-white hover:text-gray-300">Profesores</a></li>
+                <li><a href="#contacto" class="text-white hover:text-gray-300">Contacto</a></li>
             </ul>
         </nav>
 
         <!-- Sección Hero + CTA (Imagen de gran tamaño y atractiva, Texto inspirador y llamativo y CTA grande, con colores llamativos, debe llevar el texto ¡Inscríbete ahora! o similar) -->
-        <section class="hero bg-cover bg-center h-screen" style="background-image: url('./img/hero.jpg');">
+        <section class="hero bg-cover bg-center h-screen" style="background-image: url('./assets/img/hero/IMG_9372.jpg');">
             <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
                 <div class="text-center text-white p-8">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">¡Transforma tu futuro con nosotros!</h1>
-                    <p class="text-lg mb-6">Aprende a programar desde cero con nuestros cursos diseñados para todos los niveles.</p>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4"><strong>¿Te apasiona contar historias, crear contenidos o cambiar el mundo con ideas?</strong></h1>
+                    <p class="text-lg mb-6">La carrera de Ciencias de la Comunicación en UMAR Huatulco es para ti. ¡Exprésate, conecta, evoluciona!</p>
                     <a href="#courses" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">¡Inscríbete ahora!</a>
                     
                     <!-- Social icons (Al pie de Hero Section, hay un contenedor con iconos para redes sociales (usar boxicons))-->
@@ -67,27 +71,34 @@
 
         <!-- Numeralia (Stats section) (En esta sección destacaremos algunos datos relevantes sobre nuestra carrera. Por ejemplo, la cantidad total de personas egresadas, los años de experiencia que tiene la carrera, el porcentaje de titulación, la cantidad de egresados que encuentran empleo en el campo etc.. )-->
         <section class="mt-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Texto ilustrativo -->
+            <div class="bg-blue-500 text-white p-6 shadow-md text-center">
+                <h2 class="text-3xl font-bold mb-4">Comunicamos con datos</h2>
+                <p class="text-lg mb-4">Estos son algunos logros y cifras que marcan nustra historia:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
         
                 <!-- Card 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="./img/egresados.png" alt="Egresados" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-2xl font-bold mb-2">500+</h3>
+                    <img src="./assets/img/numeralia/IMG_9367.jpg" alt="Egresados" class="w-64 h-64 mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">+320</h3>
                     <p class="text-gray-600">Egresados</p>
                 </div>
         
                 <!-- Card 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="./img/experiencia.png" alt="Experiencia" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-2xl font-bold mb-2">10 Años</h3>
-                    <p class="text-gray-600">De experiencia</p>
+                    <img src="./assets/img/numeralia/IMG_9342.jpg" alt="Experiencia" class="w-64 h-64 mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">72%</h3>
+                    <p class="text-gray-600">Tasa de titulación</p>
                 </div>
         
                 <!-- Card 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="./img/titulacion.png" alt="Tasa de titulación" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-2xl font-bold mb-2">95%</h3>
-                    <p class="text-gray-600">Tasa de titulación</p>
+                    <img src="./assets/img/numeralia/IMG_9369.jpg" alt="Tasa de titulación" class="w-64 h-64 mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">65%</h3>
+                    <p class="text-gray-600">Desempeño en áreas afines</p>
                 </div>
         
             </div>
@@ -98,47 +109,20 @@
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12">Historias que inspiran</h2>
         
-                <div class="grid gap-8 md:grid-cols-3">
+                <div class="grid gap-8 md:grid-cols-1">
         
                     <!-- Testimonio 1 -->
                     <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="./img/testimonio1.jpg" alt="Alex Ramírez" class="rounded-full w-24 h-24 object-cover mb-4">
+                        <img src="./assets/img/testimonial/IMG_9381.jpg" alt="Alex Ramírez"
+                            class="rounded-full w-64 h-64 object-cover mb-4">
                         <p class="italic text-gray-700 mb-4">
-                            “Gracias a la formación que recibí, hoy trabajo en una empresa internacional como desarrollador.”
+                            “Logré aterrizar todas mis ideas en un proyecto sólido por todo el aprendizaje y reflexión de esos años; en ver
+                            la forma pero sobre todo el fondo de lo que quería mostrar con mi trabajo y hacía dónde quería ir avanzando.”
                         </p>
-                        <p class="font-semibold text-blue-700 mb-4">— Alex Ramírez, egresado 2022</p>
-                        <a href="#leer-mas"
-                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
-                            Leer más...
-                        </a>
-                    </div>
-        
-                    <!-- Testimonio 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="./img/testimonio2.jpg" alt="Sofía Torres" class="rounded-full w-24 h-24 object-cover mb-4">
-                        <p class="italic text-gray-700 mb-4">
-                            “Lo que aprendí aquí me dio la seguridad para lanzar mi propia app. ¡Ahora tengo miles de usuarios
-                            activos!”
-                        </p>
-                        <p class="font-semibold text-blue-700 mb-4">— Sofía Torres, egresada 2021</p>
-                        <a href="#leer-mas"
-                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
-                            Leer más...
-                        </a>
-                    </div>
-        
-                    <!-- Testimonio 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="./img/testimonio3.jpg" alt="Luis Hernández" class="rounded-full w-24 h-24 object-cover mb-4">
-                        <p class="italic text-gray-700 mb-4">
-                            “Conseguí trabajo como junior developer apenas unas semanas después de terminar el curso.
-                            ¡Totalmente recomendado!”
-                        </p>
-                        <p class="font-semibold text-blue-700 mb-4">— Luis Hernández, egresado 2023</p>
-                        <a href="#leer-mas"
-                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
-                            Leer más...
-                        </a>
+                        <p class="font-semibold text-blue-700 mb-4">— Yoari</p>
+                        <p class="text-gray-600">Sus líneas de trabajo giran en torno al textil artesanal, el feminismo y el emprendimiento social. Gracias a su vida en Huatulco adora las tortugas. Su trabajo y su andar están vinculados con la formación y enseñanzas que tuvo en la carrera. Inicialmente transitó en el mundo del documental, su primera pasión profesional, luego se enfocó en el trabajo comunitario hasta lograr formar su propia empresa. Hilo de Nube es un proyecto textil comunitario en el que reactivan la economía local a través de la tradición textil, </p>
+                        <a href="https://www.facebook.com/share/19K1G229Qa/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
+                            class="mt-4 text-blue-500 hover:underline">Ver más...</a>
                     </div>
         
                 </div>
@@ -148,23 +132,26 @@
                 
                     <div class="flex flex-wrap justify-center items-center gap-6">
                         <!-- Logo 1 -->
-                        <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-microsoft text-6xl"></i>
+                        <a href=" https://bossondehux.pixieset.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/instituciones de salida/bosson.jpg" alt="Bosson" class="w-24 h-24 object-contain">
                         </a>
                 
                         <!-- Logo 2 (Spotify) -->
-                        <a href="https://www.spotify.com" target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-spotify text-6xl"></i>
+                        <a href="https://www.oaxaca.gob.mx/cortv/" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/instituciones de salida/images.jpg" alt="Ecosur" class="w-24 h-24 object-contain">
                         </a>
                 
                         <!-- Logo 4 -->
-                        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-google text-6xl"></i>
+                        <a href="https://www.instagram.com/elcolibriagenciaculturalmx/?hl=es-la" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/instituciones de salida/el colibri.jpg" alt="El Colibrí Agencia Cultural" class="w-24 h-24 object-contain">
                         </a> 
                 
-                        <!-- Logo 5 (Youtube) -->
-                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-youtube text-6xl"></i>
+                        <a href="https://hilodenubeoaxaca.mx/?srsltid=AfmBOopVWdNmgYPB-t3FmIKbYTnQ6VNQScUnqINymRF50GoAyXajenu1" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/instituciones de salida/logo-hilodenube-final_1.png" alt="Hilo de Nube" class="w-24 h-24 object-contain">
+                        </a>
+
+                        <a href=" https://www.ecosur.mx/unidad/san-cristobal/" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/instituciones de salida/ECOSUR.jpg" alt="Ecosur" class="w-24 h-24 object-contain">
                         </a>
                     </div>
                 </div>
@@ -173,15 +160,15 @@
         </section>
 
         <!-- Plan de estudios -->
-        <section class="bg-white py-16 mt-12">
+        <section id="plan" class="bg-white py-16 mt-12">
             <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <!-- Columna izquierda: PDF embebido -->
                 <div class="w-full h-[600px] border rounded-lg overflow-hidden shadow-lg">
-                    <iframe src="./assets/pdf/plan-de-estudios-comunicacion.pdf" width="100%" height="100%" frameborder="0"
+                    <iframe src="./assets/pdf/plan de estudios/PLAN DE ESTUDIOS NUEVO CC.pdf" width="100%" height="100%" frameborder="0"
                         style="object-fit: contain;">
                         Este navegador no admite iframes embebidos de PDF. Puedes descargar el archivo
-                        <a href="./assets/pdf/plan-de-estudios-comunicacion.pdf">aquí</a>.
+                        <a href="./assets/pdf/plan de estudios/PLAN DE ESTUDIOS NUEVO CC.pdf">aquí</a>.
                     </iframe>
                 </div>
         
@@ -204,63 +191,140 @@
         </section>
 
         <!-- Profesores -->
-        <section class="bg-gray-50 py-16 mt-12">
+        <section id="profesores" class="bg-gray-50 py-16 mt-12">
             <div class="max-w-6xl mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold mb-10">Nuestro equipo docente</h2>
         
                 <!-- Contenedor de tarjetas -->
-                <div id="profesoresGrid" class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div id="profesoresGrid" class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
         
                     <!-- Profesor 1 -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <img src="./img/profesor1.jpg" alt="Dra. Laura Martínez"
+                        <img src="./assets/img/PROFESORES/Gabriel_Javán.png" alt="Dr. Gabriel Gutiérrez"
                             class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
-                        <h3 class="text-xl font-semibold">Dra. Laura Martínez</h3>
-                        <p class="text-gray-600 text-sm mt-2">Especialista en inteligencia artificial con más de 15 años de
-                            experiencia académica.</p>
+                        <h3 class="text-xl font-semibold">Dr. Gabriel Gutiérrez</h3>
+                        <p class="text-gray-600 text-sm mt-2">Doctorado en Ciencias Políticas y Sociales (orientación Sociología), Maestría en Comunicación, Licenciatura en Ciencias de la Comunicación.</p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: ggjavan@huatulco.umar.mx
+                        </p>
                     </div>
         
                     <!-- Profesor 2 -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <img src="./img/profesor2.jpg" alt="Mtro. Carlos Herrera"
+                        <img src="./assets/img/PROFESORES/israel_morales_0.png" alt="Dr. Israel Morales"
                             class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
-                        <h3 class="text-xl font-semibold">Mtro. Carlos Herrera</h3>
-                        <p class="text-gray-600 text-sm mt-2">Desarrollador full-stack y docente en tecnologías web desde 2012.
+                        <h3 class="text-xl font-semibold">Dr. Israel Morales</h3>
+                        <p class="text-gray-600 text-sm mt-2">Licenciatura en Biblioteconomía, Maestría en Historia y Etnohistoria, Doctorado en Historia, Miembro del SNII, Líneas de investigación actuales: Historia social, siglo XIX Historia de Oaxaca: liberalismo, café, educación y economía.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: israelmorales@huatulco.umar.mx
                         </p>
                     </div>
         
                     <!-- Profesor 3 -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <img src="./img/profesor3.jpg" alt="Dra. Ana Suárez"
+                        <img src="./assets/img/PROFESORES/Jorge-Meneses.png" alt="Dr. Jorge Alberto Meneses"
                             class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
-                        <h3 class="text-xl font-semibold">Dra. Ana Suárez</h3>
-                        <p class="text-gray-600 text-sm mt-2">Investigadora en ciencia de datos con múltiples publicaciones
-                            internacionales.</p>
+                        <h3 class="text-xl font-semibold">Dr. Jorge Alberto Meneses</h3>
+                        <p class="text-gray-600 text-sm mt-2">Licenciatura en Antropología Social, Maestría en Sociología Política, Doctorado en Estudios Latinoamericanos, SNI I, Líneas de investigación actuales: Juventudes en América Latina, Métodos y Culturas Digitales, Antropología del Deporte, Culturas Populares.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: jogem@huatulco.umar.mx <br> jorgemenecs@hotmail.com
+                        </p>
                     </div>
         
                     <!-- Profesor 4 -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <img src="./img/profesor4.jpg" alt="Ing. Miguel Torres"
+                        <img src="./assets/img/PROFESORES/maria_teresa_lopez.png" alt="Dra. María Teresa López"
                             class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
-                        <h3 class="text-xl font-semibold">Ing. Miguel Torres</h3>
-                        <p class="text-gray-600 text-sm mt-2">Consultor en ciberseguridad y mentor de proyectos estudiantiles.
+                        <h3 class="text-xl font-semibold">Dra. María Teresa López</h3>
+                        <p class="text-gray-600 text-sm mt-2">Licenciatura en Ciencias de la Comunicación, Maestría en Estudios Latinoamericanos, Doctorado en Educación, Miembro del SNII, Líneas de investigación actuales: Cine, Educomunicación, Cultura organizacional, Turismo cinematográfico, Estudios oaxaqueños.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: mariateresal@huatulco.umar.mx 
                         </p>
                     </div>
         
                     <!-- Más profesores (ocultos por defecto) -->
                     <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
-                        <img src="./img/profesor5.jpg" alt="Lic. Sofía Pérez"
+                        <img src="./assets/img/PROFESORES/Silvia_Patricia.png" alt="Dra. Silvia Patricia Paredes"
                             class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
-                        <h3 class="text-xl font-semibold">Lic. Sofía Pérez</h3>
-                        <p class="text-gray-600 text-sm mt-2">Psicopedagoga enfocada en metodologías activas y aprendizaje
-                            personalizado.</p>
+                        <h3 class="text-xl font-semibold">Dra. Silvia Patricia Paredes</h3>
+                        <p class="text-gray-600 text-sm mt-2">Pos-doctorado en la Universidad del Papaloapan con línea de investigación en emprendimiento femenino en la región de la Chinantla Baja, Doctorado en Ciencias en Desarrollo Regional y Tecnológico, Maestría en Ciencias en Desarrollo Regional y Tecnológico, Licenciatura en Ingeniería en Diseño, Miembro del SNII.</p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: patricia@huatulco.umar.mx 
+                        </p>
                     </div>
         
                     <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
-                        <img src="./img/profesor6.jpg" alt="Mtro. Andrés Gómez"
+                        <img src="./assets/img/PROFESORES/Estefania_Guadalupe.png" alt="Mtra. Estefanía Guadalupe Luna"
                             class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
-                        <h3 class="text-xl font-semibold">Mtro. Andrés Gómez</h3>
-                        <p class="text-gray-600 text-sm mt-2">Especialista en sistemas embebidos y automatización industrial.
+                        <h3 class="text-xl font-semibold">Mtra. Estefanía Guadalupe Luna</h3>
+                        <p class="text-gray-600 text-sm mt-2">Licenciatura en Ciencias de la Comunicación, Maestría en Antropología Visual y Documental Antropológico, Líneas de investigación actuales: Estudios afromexicanos Antropología visual, Antropología de la Comunicación.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: fanitchen@gmail.com 
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
+                        <img src="./assets/img/PROFESORES/Adela_Alarcón.png" alt="Mtra. Iztacxochitl Adela Alarcón" class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Mtra. Iztacxochitl Adela Alarcón</h3>
+                        <p class="text-gray-600 text-sm mt2">Maestría en Comunicación, Licenciatura en Ciencias de la Comunicación, Líneas de investigación actuales: Identidad, Historia oral y análisis del discurso.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: adela.alarcon@aulavirtual.umar.mx
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
+                        <img src="./assets/img/PROFESORES/madai_quiroz_0.png" alt="Mtra. Madai Quiroz"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Mtra Madai Quiroz</h3>
+                        <p class="text-gray-600 text-sm mt-2">Maestría en Comunicación, Licenciatura en Sociología, Líneas de investigación actuales: Apropiación social tecnológica y tercer sector, Afectos y experiencias corporales en las relaciones entre humanos y no humanos.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: madai@aulavirtual.umar.mx 
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
+                        <h3 class="text-xl font-semibold">Mtra. Sonia López</h3>
+                        <p class="text-gray-600 text-sm mt-2">Licenciatura Ciencias de la Comunicación, Maestría en Filosofía de la Ciencia, Líneas de investigación actuales: Comunicación del conocimiento.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: sonial@huatulco.umar.mx
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
+                        <h3 class="text-xl font-semibold">Mtro. Gabriel Garduño</h3>
+                        <p class="text-gray-600 text-sm mt-2">Maestría en Educación con especialidad en Comunicación, Líneas de investigación actuales: Medios tradicionales de comunicación, Producción audiovisual, Nuevas tecnologías de Información y Comunicación
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: ggarduno@huatulco.umar.mx 
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
+                        <img src="./assets/img/PROFESORES/Mario_Alberto.png" alt="Mtro. Mario Alberto Gómez"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Mtro. Mario Alberto Gómez</h3>
+                        <p class="text-gray-600 text-sm mt-2">Licenciatura en Artes Visuales, Maestría en Artes Visuales, Líneas de investigación actuales: Imaginarios comunes entre arte y ciencia, Interculturalidad y estética, Comunicación visual y desarrollo regional.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: marioalb@huatulco.umar.mx
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md hidden" data-extra>
+                        <img src="./assets/img/PROFESORES/Manuel_Tenorio.png" alt="Lic José Manuel Tenorio"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+                        <h3 class="text-xl font-semibold">Lic. José Manuel Tenorio</h3>
+                        <p class="text-gray-600 text-sm mt-2">Licenciatura en Periodismo y comunicación colectiva, Líneas de investigación actuales: Historia y comunicación, Historia de los medios de comunicación, Divulgación científica, Comunicación transmedia.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Contacto: matensa@huatulco.umar.mx
                         </p>
                     </div>
         
@@ -275,7 +339,7 @@
         </section>
 
         <!-- Preguntas frecuentes -->
-        <section class="bg-white py-16 mt-12">
+        <section id="faq" class="bg-white py-16 mt-12">
             <div class="max-w-3xl mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-10">Preguntas frecuentes</h2>
         
@@ -286,12 +350,11 @@
                     <div class="border border-gray-200 rounded-lg">
                         <button
                             class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
-                            ¿Necesito conocimientos previos para inscribirme?
+                            ¿Cuáles son los requisitos para ingresar a la carrera?
                             <span class="text-xl">+</span>
                         </button>
                         <div class="hidden px-4 pb-4 text-gray-600 faq-content">
-                            No, nuestros cursos están diseñados para que puedas comenzar desde cero. Iniciamos con los
-                            fundamentos más básicos.
+                            Para ingresar necesitas haber concluido el bachillerato, registrarte en el proceso de admisión de la UMAR, presentar el examen de ingreso y cumplir con los requisitos establecidos por la universidad. La convocatoria se publica cada año en la página oficial.
                         </div>
                     </div>
         
@@ -299,11 +362,11 @@
                     <div class="border border-gray-200 rounded-lg">
                         <button
                             class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
-                            ¿Cuál es la duración del plan de estudios?
+                            ¿Qué tipo de materias se ven en la carrera?
                             <span class="text-xl">+</span>
                         </button>
                         <div class="hidden px-4 pb-4 text-gray-600 faq-content">
-                            El plan de estudios tiene una duración de 3 años, dividido en 6 semestres.
+                            El plan de estudios combina teoría y práctica. Verás materias como comunicación audiovisual, análisis de medios, producción radiofónica y audiovisual, semiótica, fotografía, comunicación comunitaria, periodismo, investigación social y mucho más.
                         </div>
                     </div>
         
@@ -311,12 +374,11 @@
                     <div class="border border-gray-200 rounded-lg">
                         <button
                             class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
-                            ¿Puedo estudiar en línea?
+                            ¿Hay clases prácticas o sólo teoría?
                             <span class="text-xl">+</span>
                         </button>
                         <div class="hidden px-4 pb-4 text-gray-600 faq-content">
-                            Sí. Contamos con modalidad presencial y en línea, ambas con el mismo nivel académico y
-                            acompañamiento docente.
+                            Sí, hay muchas actividades prácticas. Trabajamos con radio, video, medios digitales, fotografía y talleres de producción. También se fomenta la vinculación con proyectos culturales y comunitarios.
                         </div>
                     </div>
         
@@ -324,11 +386,11 @@
                     <div class="border border-gray-200 rounded-lg">
                         <button
                             class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
-                            ¿Qué opciones de financiamiento existen?
+                            ¿En qué puedo trabajar al egresar?
                             <span class="text-xl">+</span>
                         </button>
                         <div class="hidden px-4 pb-4 text-gray-600 faq-content">
-                            Ofrecemos planes de pago mensuales y también convenios con instituciones para becas parciales.
+                            Puedes trabajar en medios de comunicación, instituciones públicas o privadas, agencias de comunicación, organizaciones sociales, producción audiovisual, gestión cultural, docencia o continuar con estudios de posgrado.
                         </div>
                     </div>
         
@@ -337,19 +399,17 @@
         </section>
 
         <!-- Contacto -->
-        <section class="bg-white py-16 mt-12">
+        <section id="contacto" class="bg-white py-16 mt-12">
             <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
         
                 <!-- Columna izquierda: Datos de contacto -->
                 <div>
                     <h2 class="text-3xl font-bold mb-6">Contáctanos</h2>
-                    <p class="text-gray-700 mb-4"><strong>Dirección:</strong> Calle Ejemplo 123, Col. Centro, Ciudad, Estado, CP
-                        00000</p>
+                    <p class="text-gray-700 mb-4"><strong>Dirección:</strong> Ciudad Universitaria, Santa María Huatulco, Oax., México C.P. 70989</p>
                     <p class="text-gray-700 mb-4"><strong>Teléfono:</strong> <a href="tel:+521234567890"
-                            class="text-blue-600 hover:underline">+52 123 456 7890</a></p>
+                            class="text-blue-600 hover:underline">(958) 587 2559 & (958) 587 2561</a></p>
                     <p class="text-gray-700 mb-4"><strong>Email:</strong> <a href="mailto:informes@universidad.edu"
-                            class="text-blue-600 hover:underline">informes@universidad.edu</a></p>
-                    <p class="text-gray-600 mt-6">Horario de atención:<br>Lunes a Viernes de 9:00 AM a 6:00 PM</p>
+                            class="text-blue-600 hover:underline">servesc@huatulco.umar.mx</a></p>
                 </div>
         
                 <!-- Columna derecha: Mapa de ubicación -->
@@ -431,7 +491,7 @@
                 <!-- Créditos -->
                 <div>
                     <p class="text-sm">
-                        Propuesta realizada por <strong>Nombre del Estudiante</strong> — 2025
+                        Propuesta realizada por <strong>Ana Barahona</strong> — 2025
                     </p>
                 </div>
         
@@ -446,29 +506,5 @@
         </footer>
 
         <script src="./js/script.js"></script>
-        <script>
-            const toggles = document.querySelectorAll('.faq-toggle');
-
-            toggles.forEach((toggle) => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('span');
-
-                    content.classList.toggle('hidden');
-                    icon.textContent = content.classList.contains('hidden') ? '+' : '−';
-                });
-            });
-        </script>
-        <script>
-            const button = document.getElementById('toggleProfesores');
-            const extraCards = document.querySelectorAll('[data-extra]');
-            let expanded = false;
-
-            button.addEventListener('click', () => {
-                expanded = !expanded;
-                extraCards.forEach(card => card.classList.toggle('hidden'));
-                button.textContent = expanded ? 'Ver menos' : '+ Más';
-            });
-        </script>
     </body>
 </html>

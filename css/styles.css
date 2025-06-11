@@ -1,0 +1,7 @@
+html, body {
+    height: 100%;
+}
+
+.hero-bg {
+    background-image: url('./assets/img/hero/IMG_9372.jpg');
+}
