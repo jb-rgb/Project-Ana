@@ -3,5 +3,18 @@ html, body {
 }
 
 .bg-hero {
-    background-image: url('../assets/img/hero/IMG_0015.jpg')
+  position: relative;
+  background-image: url('../assets/img/hero/IMG_0015.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.bg-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* opacidad solo del fondo */
+  z-index: 1;
 }
