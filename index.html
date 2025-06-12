@@ -9,184 +9,228 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="./css/styles.css">
     </head>
-    <body id="inicio" class="pt-16 bg-gray-100 text-gray-800 font-sans h-full scroll-smooth">
+    <body id="inicio" class="min-h-screen bg-gray-100 text-gray-800 font-sans scroll-smooth antialiased">
         <!-- Navbar con 7 apartados -->
-        <nav class="bg-gray-800 p-4 fixed top-0 left-0 w-full z-10 shadow-md">
-            <ul class="flex items-center space-x-6">
+        <nav class="bg-gray-800 fixed top-0 left-0 w-full z-20 shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
         
-                <!-- Logo -->
-                <li>
-                    <img src="./assets/img/LOGO.png" alt="Logo de la escuela" class="w-16 h-16 object-contain" />
-                </li>
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <img src="./assets/img/LOGO.png" alt="Logo de la escuela" class="h-12 w-auto object-contain" />
+                    </div>
         
-                <!-- Título -->
-                <li class="flex-grow text-white text-lg font-semibold text-center">
-                    Ciencias de la Comunicación
-                </li>
+                    <!-- Botón Hamburguesa (visible solo en móviles) -->
+                    <div class="flex md:hidden">
+                        <button id="menu-toggle" class="text-white focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
         
-                <!-- Enlaces -->
-                <li><a href="#inicio" class="text-white hover:text-gray-300">¿Qués es?</a></li>
-                <li><a href="#faq" class="text-white hover:text-gray-300">Preguntas</a></li>
-                <li><a href="#plan" class="text-white hover:text-gray-300">Plan de Estudios</a></li>
-                <li><a href="#profesores" class="text-white hover:text-gray-300">Profesores</a></li>
-                <li><a href="#contacto" class="text-white hover:text-gray-300">Contacto</a></li>
-            </ul>
+                    <!-- Menú -->
+                    <div id="menu" class="hidden md:flex md:items-center space-x-6">
+                        <span class="text-white text-lg font-semibold hidden md:inline">Ciencias de la Comunicación</span>
+                        <a href="#inicio" class="text-white hover:text-gray-300">¿Qué es?</a>
+                        <a href="#faq" class="text-white hover:text-gray-300">Preguntas</a>
+                        <a href="#plan" class="text-white hover:text-gray-300">Plan de Estudios</a>
+                        <a href="#profesores" class="text-white hover:text-gray-300">Profesores</a>
+                        <a href="#contacto" class="text-white hover:text-gray-300">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Menú móvil (drop-down) -->
+            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-gray-800">
+                <a href="#inicio" class="block text-white hover:text-gray-300">¿Qué es?</a>
+                <a href="#faq" class="block text-white hover:text-gray-300">Preguntas</a>
+                <a href="#plan" class="block text-white hover:text-gray-300">Plan de Estudios</a>
+                <a href="#profesores" class="block text-white hover:text-gray-300">Profesores</a>
+                <a href="#contacto" class="block text-white hover:text-gray-300">Contacto</a>
+            </div>
         </nav>
 
         <!-- Sección Hero + CTA (Imagen de gran tamaño y atractiva, Texto inspirador y llamativo y CTA grande, con colores llamativos, debe llevar el texto ¡Inscríbete ahora! o similar) -->
-        <section class="hero bg-cover bg-center h-screen" style="background-image: url('./assets/img/hero/IMG_9372.jpg');">
-            <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
-                <div class="text-center text-white p-8">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4"><strong>¿Te apasiona contar historias, crear contenidos o cambiar el mundo con ideas?</strong></h1>
-                    <p class="text-lg mb-6">La carrera de Ciencias de la Comunicación en UMAR Huatulco es para ti. ¡Exprésate, conecta, evoluciona!</p>
-                    <a href="#courses" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">¡Inscríbete ahora!</a>
-                    
-                    <!-- Social icons (Al pie de Hero Section, hay un contenedor con iconos para redes sociales (usar boxicons))-->
-                    <div class="flex justify-center space-x-6 mt-6">
-                        <a href="#" class="text-white hover:text-gray-300">
-                            <i class="bi bi-facebook text-3xl"></i>
-                        </a>
-                        <a href="#" class="text-white hover:text-gray-300">
-                            <i class="bi bi-twitter-x text-3xl"></i>
-                        </a>
-                        <a href="#" class="text-white hover:text-gray-300">
-                            <i class="bi bi-instagram text-3xl"></i>
-                        </a>
-                    </div>
-
-                    <!-- Newsletter (En seguida de social icons tenemos un contenedor para que las personas nos dejen su mail para suscribirse a nuestro boletín de noticias) -->
-                    <section class="bg-black-100 p-8 mt-8">
-                        <div class="max-w-md mx-auto text-center">
-                            <h2 class="text-2xl font-bold mb-4">Suscríbete a nuestro boletín</h2>
-                            <p class="mb-6">Recibe las últimas noticias y actualizaciones sobre nuestros cursos directamente en tu correo electrónico.</p>
-                            <form action="#" method="POST" class="flex flex-col space-y-4">
-                                <input type="email" placeholder="Tu correo electrónico" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Suscribirse</button>
-                            </form>
-                        </div>
-                    </section>
+        <!-- Hero Section -->
+        <section class="bg-hero relative bg-cover bg-center h-screen" style="background-image: url('./assets/img/hero/IMG_0015.jpg');">
+        
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4 max-w-4xl">
+                    ¿Te apasiona contar historias, crear contenidos o cambiar el mundo con ideas?
+                </h1>
+                <p class="text-lg md:text-xl mb-6 max-w-xl">
+                    La carrera de Ciencias de la Comunicación en UMAR Huatulco es para ti. ¡Exprésate, conecta, evoluciona!
+                </p>
+                <a href="https://www.umar.mx/web/index.php/ensenanza/licenciaturas/licenciatura_en_ciencias_de_la_comunicacion"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">
+                    ¡Inscríbete ahora!
+                </a>
+        
+                <!-- Social Icons -->
+                <div class="flex justify-center space-x-6 mt-6">
+                    <a href="#" class="text-white hover:text-gray-300">
+                        <i class="bi bi-facebook text-3xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-300">
+                        <i class="bi bi-twitter-x text-3xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-300">
+                        <i class="bi bi-instagram text-3xl"></i>
+                    </a>
                 </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter -->
+        <section class="bg-white py-12 px-6">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Suscríbete a nuestro boletín</h2>
+                <p class="text-gray-700 mb-6">
+                    Recibe las últimas noticias y actualizaciones sobre nuestros cursos directamente en tu correo electrónico.
+                </p>
+                <form action="#" method="POST" class="flex flex-col space-y-4">
+                    <input type="email" placeholder="Tu correo electrónico" required
+                        class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Suscribirse
+                    </button>
+                </form>
             </div>
         </section>
 
         <!-- Numeralia (Stats section) (En esta sección destacaremos algunos datos relevantes sobre nuestra carrera. Por ejemplo, la cantidad total de personas egresadas, los años de experiencia que tiene la carrera, el porcentaje de titulación, la cantidad de egresados que encuentran empleo en el campo etc.. )-->
-        <section class="mt-12">
-
-            <!-- Texto ilustrativo -->
-            <div class="bg-blue-500 text-white p-6 shadow-md text-center">
-                <h2 class="text-3xl font-bold mb-4">Comunicamos con datos</h2>
-                <p class="text-lg mb-4">Estos son algunos logros y cifras que marcan nustra historia:</p>
+        <section class="mt-16 px-6">
+            <!-- Encabezado -->
+            <div class="bg-blue-500 text-white p-8 rounded-lg shadow-md text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comunicamos con datos</h2>
+                <p class="text-lg md:text-xl">Estos son algunos logros y cifras que marcan nuestra historia:</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
         
+            <!-- Tarjetas -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
                 <!-- Card 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="./assets/img/numeralia/IMG_9367.jpg" alt="Egresados" class="w-64 h-64 mx-auto mb-4">
-                    <h3 class="text-2xl font-bold mb-2">+320</h3>
-                    <p class="text-gray-600">Egresados</p>
+                    <img src="./assets/img/numeralia/IMG_9367.jpg" alt="Egresados"
+                        class="w-full h-64 object-cover rounded mb-4">
+                    <h3 class="text-3xl font-bold text-blue-600 mb-2">+320</h3>
+                    <p class="text-gray-700">Egresados</p>
                 </div>
         
                 <!-- Card 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="./assets/img/numeralia/IMG_9342.jpg" alt="Experiencia" class="w-64 h-64 mx-auto mb-4">
-                    <h3 class="text-2xl font-bold mb-2">72%</h3>
-                    <p class="text-gray-600">Tasa de titulación</p>
+                    <img src="./assets/img/numeralia/IMG_9342.jpg" alt="Titulación"
+                        class="w-full h-64 object-cover rounded mb-4">
+                    <h3 class="text-3xl font-bold text-blue-600 mb-2">72%</h3>
+                    <p class="text-gray-700">Tasa de titulación</p>
                 </div>
         
                 <!-- Card 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="./assets/img/numeralia/IMG_9369.jpg" alt="Tasa de titulación" class="w-64 h-64 mx-auto mb-4">
-                    <h3 class="text-2xl font-bold mb-2">65%</h3>
-                    <p class="text-gray-600">Desempeño en áreas afines</p>
+                    <img src="./assets/img/numeralia/IMG_9369.jpg" alt="Desempeño"
+                        class="w-full h-64 object-cover rounded mb-4">
+                    <h3 class="text-3xl font-bold text-blue-600 mb-2">65%</h3>
+                    <p class="text-gray-700">Desempeño en áreas afines</p>
                 </div>
-        
             </div>
         </section>
         
         <!-- Testimonios (Sección con una gran imagen ilustrativa y un texto con testimonio de caso de éxito, puede ser un ex alumne, o cualquier otro caso de éxito que se quiera resaltar. Al pie incluye un botón de leer más...)-->
-        <section class="bg-gray-100 py-12 mt-12">
+        <section class="bg-gray-100 py-16 mt-12">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">Historias que inspiran</h2>
+                <!-- Título -->
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Historias que inspiran</h2>
         
-                <div class="grid gap-8 md:grid-cols-1">
-        
-                    <!-- Testimonio 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                        <img src="./assets/img/testimonial/IMG_9381.jpg" alt="Alex Ramírez"
-                            class="rounded-full w-64 h-64 object-cover mb-4">
-                        <p class="italic text-gray-700 mb-4">
-                            “Logré aterrizar todas mis ideas en un proyecto sólido por todo el aprendizaje y reflexión de esos años; en ver
-                            la forma pero sobre todo el fondo de lo que quería mostrar con mi trabajo y hacía dónde quería ir avanzando.”
-                        </p>
-                        <p class="font-semibold text-blue-700 mb-4">— Yoari</p>
-                        <p class="text-gray-600">Sus líneas de trabajo giran en torno al textil artesanal, el feminismo y el emprendimiento social. Gracias a su vida en Huatulco adora las tortugas. Su trabajo y su andar están vinculados con la formación y enseñanzas que tuvo en la carrera. Inicialmente transitó en el mundo del documental, su primera pasión profesional, luego se enfocó en el trabajo comunitario hasta lograr formar su propia empresa. Hilo de Nube es un proyecto textil comunitario en el que reactivan la economía local a través de la tradición textil, </p>
-                        <a href="https://www.facebook.com/share/19K1G229Qa/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
-                            class="mt-4 text-blue-500 hover:underline">Ver más...</a>
-                    </div>
-        
+                <!-- Testimonio -->
+                <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <img src="./assets/img/testimonial/IMG_9381.jpg" alt="Yoari"
+                        class="rounded-full w-40 h-40 md:w-64 md:h-64 object-cover mb-6 shadow-lg">
+                    <p class="italic text-gray-700 text-lg mb-4 max-w-3xl">
+                        “Logré aterrizar todas mis ideas en un proyecto sólido por todo el aprendizaje y reflexión de esos años;
+                        en ver
+                        la forma pero sobre todo el fondo de lo que quería mostrar con mi trabajo y hacía dónde quería ir
+                        avanzando.”
+                    </p>
+                    <p class="font-semibold text-blue-700 text-lg mb-2">— Yoari</p>
+                    <p class="text-gray-600 text-base max-w-4xl mb-4">
+                        Sus líneas de trabajo giran en torno al textil artesanal, el feminismo y el emprendimiento social.
+                        Gracias a su vida en Huatulco adora las tortugas. Su trabajo y su andar están vinculados con la
+                        formación y enseñanzas que tuvo en la carrera. Inicialmente transitó en el mundo del documental, su
+                        primera pasión profesional, luego se enfocó en el trabajo comunitario hasta lograr formar su propia
+                        empresa. Hilo de Nube es un proyecto textil comunitario en el que reactivan la economía local a través de la tradición textil.
+                    </p>
+                    <a href="https://www.facebook.com/share/19K1G229Qa/?mibextid=wwXIfr" target="_blank"
+                        rel="noopener noreferrer" class="mt-4 text-blue-600 hover:underline font-medium">Ver más...</a>
                 </div>
-                <!-- Logos de empresas e instituciones -->
+        
+                <!-- Logos -->
                 <div class="mt-16 text-center">
-                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Nuestros egresados trabajan en:</h3>
-                
-                    <div class="flex flex-wrap justify-center items-center gap-6">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-8 text-gray-800">Nuestros egresados trabajan en:</h3>
+        
+                    <div class="flex flex-wrap justify-center items-center gap-8">
                         <!-- Logo 1 -->
-                        <a href=" https://bossondehux.pixieset.com" target="_blank" rel="noopener noreferrer">
-                            <img src="./assets/img/instituciones de salida/bosson.jpg" alt="Bosson" class="w-24 h-24 object-contain">
+                        <a href="https://bossondehux.pixieset.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/instituciones de salida/bosson.jpg" alt="Bosson"
+                                class="w-24 h-24 object-contain">
                         </a>
-                
-                        <!-- Logo 2 (Spotify) -->
+                        <!-- Logo 2 -->
                         <a href="https://www.oaxaca.gob.mx/cortv/" target="_blank" rel="noopener noreferrer">
-                            <img src="./assets/img/instituciones de salida/images.jpg" alt="Ecosur" class="w-24 h-24 object-contain">
+                            <img src="./assets/img/instituciones de salida/images.jpg" alt="CORTV"
+                                class="w-24 h-24 object-contain">
                         </a>
-                
+                        <!-- Logo 3 -->
+                        <a href="https://www.instagram.com/elcolibriagenciaculturalmx/?hl=es-la" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="./assets/img/instituciones de salida/el colibri.jpg" alt="El Colibrí"
+                                class="w-24 h-24 object-contain">
+                        </a>
                         <!-- Logo 4 -->
-                        <a href="https://www.instagram.com/elcolibriagenciaculturalmx/?hl=es-la" target="_blank" rel="noopener noreferrer">
-                            <img src="./assets/img/instituciones de salida/el colibri.jpg" alt="El Colibrí Agencia Cultural" class="w-24 h-24 object-contain">
-                        </a> 
-                
-                        <a href="https://hilodenubeoaxaca.mx/?srsltid=AfmBOopVWdNmgYPB-t3FmIKbYTnQ6VNQScUnqINymRF50GoAyXajenu1" target="_blank" rel="noopener noreferrer">
-                            <img src="./assets/img/instituciones de salida/logo-hilodenube-final_1.png" alt="Hilo de Nube" class="w-24 h-24 object-contain">
+                        <a href="https://hilodenubeoaxaca.mx/?srsltid=AfmBOopVWdNmgYPB-t3FmIKbYTnQ6VNQScUnqINymRF50GoAyXajenu1"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/instituciones de salida/logo-hilodenube-final_1.png" alt="Hilo de Nube"
+                                class="w-24 h-24 object-contain">
                         </a>
-
-                        <a href=" https://www.ecosur.mx/unidad/san-cristobal/" target="_blank" rel="noopener noreferrer">
-                            <img src="./assets/img/instituciones de salida/ECOSUR.jpg" alt="Ecosur" class="w-24 h-24 object-contain">
+                        <!-- Logo 5 -->
+                        <a href="https://www.ecosur.mx/unidad/san-cristobal/" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/instituciones de salida/ECOSUR.jpg" alt="Ecosur"
+                                class="w-24 h-24 object-contain">
                         </a>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- Plan de estudios -->
         <section id="plan" class="bg-white py-16 mt-12">
-            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <!-- Columna izquierda: PDF embebido -->
-                <div class="w-full h-[600px] border rounded-lg overflow-hidden shadow-lg">
-                    <iframe src="./assets/pdf/plan de estudios/PLAN DE ESTUDIOS NUEVO CC.pdf" width="100%" height="100%" frameborder="0"
-                        style="object-fit: contain;">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        
+                <!-- PDF embebido -->
+                <div class="w-full h-[500px] md:h-[600px] border rounded-lg overflow-hidden shadow-lg">
+                    <iframe src="./assets/pdf/plan de estudios/PLAN DE ESTUDIOS NUEVO CC.pdf" width="100%" height="100%"
+                        frameborder="0" class="w-full h-full">
                         Este navegador no admite iframes embebidos de PDF. Puedes descargar el archivo
                         <a href="./assets/pdf/plan de estudios/PLAN DE ESTUDIOS NUEVO CC.pdf">aquí</a>.
                     </iframe>
                 </div>
         
-                <!-- Columna derecha: Texto -->
-                <div>
+                <!-- Texto descriptivo -->
+                <div class="text-center md:text-left">
                     <h2 class="text-3xl font-bold mb-4">Plan de Estudios</h2>
                     <p class="text-gray-700 mb-6">
                         Conoce en detalle el contenido académico de nuestra carrera: materias, duración y estructura por
-                        semestre. Aquí encontrarás toda la información organizada por semestre para que puedas conocer el
-                        desarrollo académico a lo largo de tu formación.
+                        semestre.
+                        Aquí encontrarás toda la información organizada por semestre para que puedas conocer el desarrollo
+                        académico
+                        a lo largo de tu formación.
                     </p>
-                    <!-- Botón que lleva a la página del plan de estudios -->
                     <a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_ciencias_de_la_comunicacion"
+                        target="_blank" rel="noopener noreferrer"
                         class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
                         Ver más...
                     </a>
                 </div>
-        
             </div>
         </section>
 
@@ -196,7 +240,7 @@
                 <h2 class="text-3xl font-bold mb-10">Nuestro equipo docente</h2>
         
                 <!-- Contenedor de tarjetas -->
-                <div id="profesoresGrid" class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+                <div id="profesoresGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         
                     <!-- Profesor 1 -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
@@ -331,8 +375,7 @@
                 </div>
         
                 <!-- Botón para mostrar más -->
-                <button id="toggleProfesores"
-                    class="mt-8 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+                <button id="toggleProfesores" class="mt-8 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
                     + Más
                 </button>
             </div>
@@ -347,49 +390,49 @@
                 <div class="space-y-4">
         
                     <!-- Pregunta 1 -->
-                    <div class="border border-gray-200 rounded-lg">
+                    <div class="border border-gray-200 rounded-lg overflow-hidden transition-all">
                         <button
-                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
+                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle focus:outline-none">
                             ¿Cuáles son los requisitos para ingresar a la carrera?
-                            <span class="text-xl">+</span>
+                            <span class="text-xl transition-transform duration-300">+</span>
                         </button>
-                        <div class="hidden px-4 pb-4 text-gray-600 faq-content">
+                        <div class="hidden px-4 pb-4 text-gray-600 faq-content transition-all duration-300">
                             Para ingresar necesitas haber concluido el bachillerato, registrarte en el proceso de admisión de la UMAR, presentar el examen de ingreso y cumplir con los requisitos establecidos por la universidad. La convocatoria se publica cada año en la página oficial.
                         </div>
                     </div>
         
                     <!-- Pregunta 2 -->
-                    <div class="border border-gray-200 rounded-lg">
+                    <div class="border border-gray-200 rounded-lg overflow-hidden transition-all">
                         <button
-                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
+                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle focus:outline-none">
                             ¿Qué tipo de materias se ven en la carrera?
-                            <span class="text-xl">+</span>
+                            <span class="text-xl transition-transform duration-300">+</span>
                         </button>
-                        <div class="hidden px-4 pb-4 text-gray-600 faq-content">
+                        <div class="hidden px-4 pb-4 text-gray-600 faq-content transition-all duration-300">
                             El plan de estudios combina teoría y práctica. Verás materias como comunicación audiovisual, análisis de medios, producción radiofónica y audiovisual, semiótica, fotografía, comunicación comunitaria, periodismo, investigación social y mucho más.
                         </div>
                     </div>
         
                     <!-- Pregunta 3 -->
-                    <div class="border border-gray-200 rounded-lg">
+                    <div class="border border-gray-200 rounded-lg overflow-hidden transition-all">
                         <button
-                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
+                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle focus:outline-none">
                             ¿Hay clases prácticas o sólo teoría?
-                            <span class="text-xl">+</span>
+                            <span class="text-xl transition-transform duration-300">+</span>
                         </button>
-                        <div class="hidden px-4 pb-4 text-gray-600 faq-content">
+                        <div class="hidden px-4 pb-4 text-gray-600 faq-content transition-all duration-300">
                             Sí, hay muchas actividades prácticas. Trabajamos con radio, video, medios digitales, fotografía y talleres de producción. También se fomenta la vinculación con proyectos culturales y comunitarios.
                         </div>
                     </div>
         
                     <!-- Pregunta 4 -->
-                    <div class="border border-gray-200 rounded-lg">
+                    <div class="border border-gray-200 rounded-lg overflow-hidden transition-all">
                         <button
-                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle">
+                            class="w-full text-left px-4 py-3 font-semibold text-gray-800 flex justify-between items-center faq-toggle focus:outline-none">
                             ¿En qué puedo trabajar al egresar?
-                            <span class="text-xl">+</span>
+                            <span class="text-xl transition-transform duration-300">+</span>
                         </button>
-                        <div class="hidden px-4 pb-4 text-gray-600 faq-content">
+                        <div class="hidden px-4 pb-4 text-gray-600 faq-content transition-all duration-300">
                             Puedes trabajar en medios de comunicación, instituciones públicas o privadas, agencias de comunicación, organizaciones sociales, producción audiovisual, gestión cultural, docencia o continuar con estudios de posgrado.
                         </div>
                     </div>
@@ -491,7 +534,7 @@
         <!-- Footer -->
         <footer class="bg-gray-800 text-white py-6 mt-16">
             <div
-                class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4">
+                class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
         
                 <!-- Créditos -->
                 <div>
@@ -507,6 +550,7 @@
                         Volver al inicio
                     </a>
                 </div>
+        
             </div>
         </footer>
 

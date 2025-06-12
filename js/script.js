@@ -1,24 +1,47 @@
-const toggles = document.querySelectorAll(".faq-toggle");
+document.querySelectorAll(".faq-toggle").forEach((button) => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector("span");
 
-toggles.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
-    const content = toggle.nextElementSibling;
-    const icon = toggle.querySelector("span");
+    if (content.classList.contains("hidden")) {
+      // Cierra todos
+      document
+        .querySelectorAll(".faq-content")
+        .forEach((c) => c.classList.add("hidden"));
+      document
+        .querySelectorAll(".faq-toggle span")
+        .forEach((i) => (i.textContent = "+"));
 
-    content.classList.toggle("hidden");
-    icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+      // Abre este
+      content.classList.remove("hidden");
+      icon.textContent = "−";
+    } else {
+      content.classList.add("hidden");
+      icon.textContent = "+";
+    }
   });
 });
 
-const button = document.getElementById("toggleProfesores");
-const extraCards = document.querySelectorAll("[data-extra]");
-let expanded = false;
+const toggleBtn = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
 
-button.addEventListener("click", () => {
-  expanded = !expanded;
-  extraCards.forEach((card) => card.classList.toggle("hidden"));
-  button.textContent = expanded ? "Ver menos" : "+ Más";
+toggleBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
 });
+
+document
+  .getElementById("toggleProfesores")
+  .addEventListener("click", function () {
+    const extras = document.querySelectorAll("[data-extra]");
+    extras.forEach((card) => card.classList.toggle("hidden"));
+
+    // Alternar texto del botón
+    if (this.textContent.trim() === "+ Más") {
+      this.textContent = "- Menos";
+    } else {
+      this.textContent = "+ Más";
+    }
+  });
 
 document.querySelectorAll('nav a[href^="#"]').forEach((link) => {
   link.addEventListener("click", function (e) {
