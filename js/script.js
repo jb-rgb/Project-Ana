@@ -130,3 +130,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+const form = document.getElementById("newsletter-form");
+const emailInput = document.getElementById("newsletter-email");
+const errorMsg = document.getElementById("newsletter-error");
+const successMsg = document.getElementById("newsletter-success");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = emailInput.value.trim();
+  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  if (!isValidEmail) {
+    errorMsg.textContent = "Por favor ingresa un correo válido.";
+    successMsg.classList.add("hidden");
+  } else {
+    errorMsg.textContent = "";
+    successMsg.classList.remove("hidden");
+    emailInput.value = "";
+
+    // Ocultar mensaje después de 3 segundos
+    setTimeout(() => {
+      successMsg.classList.add("hidden");
+    }, 3000);
+  }
+});

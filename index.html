@@ -90,14 +90,20 @@
                 <p class="text-gray-700 mb-6">
                     Recibe las últimas noticias y actualizaciones sobre nuestros cursos directamente en tu correo electrónico.
                 </p>
-                <form action="#" method="POST" class="flex flex-col space-y-4">
-                    <input type="email" placeholder="Tu correo electrónico" required
+        
+                <form id="newsletter-form" class="flex flex-col space-y-4">
+                    <input type="email" id="newsletter-email" placeholder="Tu correo electrónico" required
                         class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <span id="newsletter-error" class="text-red-600 text-sm"></span>
+        
                     <button type="submit"
                         class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
                         Suscribirse
                     </button>
                 </form>
+        
+                <!-- Mensaje de éxito -->
+                <p id="newsletter-success" class="mt-4 text-green-600 font-semibold hidden">¡Gracias por suscribirte!</p>
             </div>
         </section>
 
