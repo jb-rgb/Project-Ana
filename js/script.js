@@ -55,6 +55,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach((link) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form-contacto");
+  const mensajeExito = document.getElementById("mensaje-exito");
 
   const campos = {
     nombre: {
@@ -99,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // También para selects
     input.addEventListener("change", () => {
       if (validar(input.value)) {
         error.textContent = "";
@@ -126,7 +126,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (esValido) {
       form.reset();
-      alert("¡Formulario enviado correctamente!");
+
+      // Mostrar el mensaje de éxito
+      mensajeExito.classList.remove("hidden");
+
+      // Ocultar el mensaje después de 3 segundos
+      setTimeout(() => {
+        mensajeExito.classList.add("hidden");
+      }, 3000);
     }
   });
 });
